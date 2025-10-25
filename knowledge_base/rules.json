@@ -1,0 +1,734 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "last_updated": "2025-09-20",
+    "total_rules": 55,
+    "references": [
+      "Zhang, L., et al. (2021). Journal of Computing and Information Technology",
+      "Kumar, S., & Sharma, A. (2022). International Journal of Electronics",
+      "Chen, W., et al. (2023). IEEE Transactions on Mobile Computing"
+    ]
+  },
+  "rules": {
+    "R1": {
+      "id": "R1",
+      "category": "display",
+      "IF": ["layar_tidak_menyala", "tombol_power_tidak_respons"],
+      "THEN": "kemungkinan_baterai_habis",
+      "CF": 0.8,
+      "description": "Jika layar tidak menyala dan tombol power tidak respons, kemungkinan baterai habis total",
+      "source": "Zhang et al. (2021)"
+    },
+    "R2": {
+      "id": "R2",
+      "category": "display",
+      "IF": ["kemungkinan_baterai_habis", "indikator_charging_tidak_muncul"],
+      "THEN": "masalah_port_charging",
+      "CF": 0.85,
+      "description": "Baterai habis namun tidak bisa charging menunjukkan masalah pada port",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R3": {
+      "id": "R3",
+      "category": "display",
+      "IF": ["layar_tidak_menyala", "tombol_power_berfungsi", "led_notifikasi_menyala"],
+      "THEN": "kerusakan_lcd_backlight",
+      "CF": 0.9,
+      "description": "Sistem hidup tapi layar gelap mengindikasikan kerusakan backlight LCD",
+      "source": "Zhang et al. (2021)"
+    },
+    "R4": {
+      "id": "R4",
+      "category": "display",
+      "IF": ["layar_retak", "touchscreen_tidak_respons"],
+      "THEN": "kerusakan_digitizer_fisik",
+      "CF": 0.95,
+      "description": "Layar retak dengan touchscreen mati adalah kerusakan digitizer fisik",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R5": {
+      "id": "R5",
+      "category": "display",
+      "IF": ["layar_bergaris", "warna_tidak_normal"],
+      "THEN": "kerusakan_lcd_panel",
+      "CF": 0.85,
+      "description": "Garis dan warna abnormal menunjukkan kerusakan panel LCD",
+      "source": "Zhang et al. (2021)"
+    },
+    "R6": {
+      "id": "R6",
+      "category": "touchscreen",
+      "IF": ["touchscreen_tidak_respons", "layar_tampil_normal", "tombol_fisik_berfungsi"],
+      "THEN": "kerusakan_touchscreen_digitizer",
+      "CF": 0.88,
+      "description": "Touchscreen tidak berfungsi sementara tampilan normal menunjukkan masalah digitizer",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R7": {
+      "id": "R7",
+      "category": "touchscreen",
+      "IF": ["touchscreen_ghost_touch", "sentuhan_acak_terjadi"],
+      "THEN": "kerusakan_touchscreen_controller",
+      "CF": 0.82,
+      "description": "Ghost touch mengindikasikan masalah pada touchscreen controller",
+      "source": "Chen et al. (2023)"
+    },
+    "R8": {
+      "id": "R8",
+      "category": "touchscreen",
+      "IF": ["touchscreen_delay", "respons_lambat"],
+      "THEN": "kemungkinan_masalah_software",
+      "CF": 0.65,
+      "description": "Delay touchscreen sering disebabkan oleh masalah software atau RAM penuh",
+      "source": "Zhang et al. (2021)"
+    },
+    "R9": {
+      "id": "R9",
+      "category": "battery",
+      "IF": ["baterai_cepat_habis", "smartphone_normal_digunakan", "baterai_berumur_kurang_1tahun"],
+      "THEN": "aplikasi_background_berlebihan",
+      "CF": 0.75,
+      "description": "Baterai cepat habis pada ponsel baru biasanya karena aplikasi background",
+      "source": "Chen et al. (2023)"
+    },
+    "R10": {
+      "id": "R10",
+      "category": "battery",
+      "IF": ["baterai_cepat_habis", "smartphone_terasa_panas", "baterai_berumur_lebih_2tahun"],
+      "THEN": "degradasi_baterai",
+      "CF": 0.9,
+      "description": "Baterai lama yang cepat habis dan panas menunjukkan degradasi baterai",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R11": {
+      "id": "R11",
+      "category": "battery",
+      "IF": ["baterai_kembung", "casing_terangkat"],
+      "THEN": "baterai_rusak_berbahaya",
+      "CF": 0.98,
+      "description": "Baterai kembung sangat berbahaya dan harus segera diganti",
+      "source": "Zhang et al. (2021)"
+    },
+    "R12": {
+      "id": "R12",
+      "category": "battery",
+      "IF": ["persentase_baterai_loncat", "indikator_tidak_akurat"],
+      "THEN": "kalibrasi_baterai_diperlukan",
+      "CF": 0.7,
+      "description": "Persentase baterai yang tidak stabil memerlukan kalibrasi",
+      "source": "Chen et al. (2023)"
+    },
+    "R13": {
+      "id": "R13",
+      "category": "charging",
+      "IF": ["tidak_bisa_charging", "kabel_data_berfungsi", "charger_berfungsi"],
+      "THEN": "kerusakan_port_usb",
+      "CF": 0.85,
+      "description": "Tidak bisa charging dengan aksesoris normal menunjukkan kerusakan port",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R14": {
+      "id": "R14",
+      "category": "charging",
+      "IF": ["charging_lambat", "kabel_terkoneksi_normal"],
+      "THEN": "kemungkinan_charger_tidak_sesuai",
+      "CF": 0.72,
+      "description": "Charging lambat bisa disebabkan oleh charger dengan ampere rendah",
+      "source": "Zhang et al. (2021)"
+    },
+    "R15": {
+      "id": "R15",
+      "category": "charging",
+      "IF": ["charging_putus_sambung", "port_goyang"],
+      "THEN": "port_usb_longgar",
+      "CF": 0.88,
+      "description": "Port yang goyang menyebabkan koneksi charging tidak stabil",
+      "source": "Chen et al. (2023)"
+    },
+    "R16": {
+      "id": "R16",
+      "category": "charging",
+      "IF": ["smartphone_panas_saat_charging", "charging_sangat_lambat"],
+      "THEN": "masalah_ic_charging",
+      "CF": 0.8,
+      "description": "Panas berlebihan saat charging mengindikasikan masalah IC charging",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R17": {
+      "id": "R17",
+      "category": "performance",
+      "IF": ["aplikasi_force_close", "terjadi_pada_semua_aplikasi"],
+      "THEN": "kemungkinan_ram_penuh",
+      "CF": 0.78,
+      "description": "Force close pada banyak aplikasi menunjukkan RAM tidak cukup",
+      "source": "Chen et al. (2023)"
+    },
+    "R18": {
+      "id": "R18",
+      "category": "performance",
+      "IF": ["aplikasi_force_close", "terjadi_pada_aplikasi_tertentu", "aplikasi_baru_diinstall"],
+      "THEN": "aplikasi_tidak_kompatibel",
+      "CF": 0.82,
+      "description": "Force close pada aplikasi spesifik menunjukkan masalah kompatibilitas",
+      "source": "Zhang et al. (2021)"
+    },
+    "R19": {
+      "id": "R19",
+      "category": "performance",
+      "IF": ["smartphone_lemot", "storage_hampir_penuh"],
+      "THEN": "storage_penuh_masalah",
+      "CF": 0.85,
+      "description": "Storage penuh menyebabkan performa menurun drastis",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R20": {
+      "id": "R20",
+      "category": "performance",
+      "IF": ["smartphone_lemot", "storage_cukup", "ram_cukup"],
+      "THEN": "kemungkinan_malware",
+      "CF": 0.7,
+      "description": "Lemot tanpa sebab jelas bisa mengindikasikan malware",
+      "source": "Chen et al. (2023)"
+    },
+    "R21": {
+      "id": "R21",
+      "category": "thermal",
+      "IF": ["smartphone_overheat", "saat_idle"],
+      "THEN": "proses_background_berlebihan",
+      "CF": 0.75,
+      "description": "Overheat saat idle menunjukkan proses background yang tidak normal",
+      "source": "Zhang et al. (2021)"
+    },
+    "R22": {
+      "id": "R22",
+      "category": "thermal",
+      "IF": ["smartphone_overheat", "saat_gaming", "suhu_normal_kembali"],
+      "THEN": "overheat_normal",
+      "CF": 0.6,
+      "description": "Panas saat gaming dan kembali normal adalah perilaku normal",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R23": {
+      "id": "R23",
+      "category": "thermal",
+      "IF": ["smartphone_overheat", "terus_menerus", "baterai_cepat_habis"],
+      "THEN": "kemungkinan_kerusakan_processor",
+      "CF": 0.82,
+      "description": "Overheat terus menerus bisa mengindikasikan masalah processor",
+      "source": "Chen et al. (2023)"
+    },
+    "R24": {
+      "id": "R24",
+      "category": "audio",
+      "IF": ["speaker_tidak_bunyi", "headphone_berfungsi"],
+      "THEN": "kerusakan_speaker",
+      "CF": 0.88,
+      "description": "Speaker mati sementara headphone normal menunjukkan kerusakan speaker",
+      "source": "Zhang et al. (2021)"
+    },
+    "R25": {
+      "id": "R25",
+      "category": "audio",
+      "IF": ["suara_pecah", "volume_maksimal"],
+      "THEN": "speaker_rusak_sebagian",
+      "CF": 0.8,
+      "description": "Suara pecah pada volume tinggi menunjukkan speaker rusak sebagian",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R26": {
+      "id": "R26",
+      "category": "audio",
+      "IF": ["microphone_tidak_berfungsi", "saat_telepon"],
+      "THEN": "kerusakan_microphone",
+      "CF": 0.85,
+      "description": "Lawan bicara tidak mendengar suara menunjukkan masalah microphone",
+      "source": "Chen et al. (2023)"
+    },
+    "R27": {
+      "id": "R27",
+      "category": "connectivity",
+      "IF": ["wifi_tidak_bisa_connect", "wifi_lain_berfungsi"],
+      "THEN": "masalah_wifi_module",
+      "CF": 0.78,
+      "description": "Wifi tidak bisa connect ke network manapun menunjukkan masalah modul",
+      "source": "Zhang et al. (2021)"
+    },
+    "R28": {
+      "id": "R28",
+      "category": "connectivity",
+      "IF": ["bluetooth_tidak_berfungsi", "perangkat_lain_terdeteksi"],
+      "THEN": "kerusakan_bluetooth_module",
+      "CF": 0.82,
+      "description": "Bluetooth tidak bisa connect menunjukkan kerusakan modul Bluetooth",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R29": {
+      "id": "R29",
+      "category": "connectivity",
+      "IF": ["sinyal_lemah", "kartu_sim_terdeteksi", "lokasi_normal"],
+      "THEN": "masalah_antena",
+      "CF": 0.75,
+      "description": "Sinyal lemah di area normal mengindikasikan masalah antena",
+      "source": "Chen et al. (2023)"
+    },
+    "R30": {
+      "id": "R30",
+      "category": "connectivity",
+      "IF": ["sim_tidak_terdeteksi", "sim_card_normal"],
+      "THEN": "kerusakan_sim_tray",
+      "CF": 0.8,
+      "description": "SIM tidak terbaca dengan kartu normal menunjukkan masalah slot SIM",
+      "source": "Zhang et al. (2021)"
+    },
+    "R31": {
+      "id": "R31",
+      "category": "camera",
+      "IF": ["kamera_tidak_berfungsi", "aplikasi_kamera_crash"],
+      "THEN": "kemungkinan_masalah_software_kamera",
+      "CF": 0.7,
+      "description": "Kamera crash bisa disebabkan masalah software atau cache",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R32": {
+      "id": "R32",
+      "category": "camera",
+      "IF": ["kamera_blur", "fokus_tidak_berfungsi"],
+      "THEN": "kerusakan_autofocus",
+      "CF": 0.82,
+      "description": "Gambar selalu blur menunjukkan kerusakan sistem autofocus",
+      "source": "Chen et al. (2023)"
+    },
+    "R33": {
+      "id": "R33",
+      "category": "camera",
+      "IF": ["kamera_hitam", "lampu_flash_berfungsi"],
+      "THEN": "kerusakan_sensor_kamera",
+      "CF": 0.85,
+      "description": "Layar hitam dengan flash berfungsi menunjukkan sensor rusak",
+      "source": "Zhang et al. (2021)"
+    },
+    "R34": {
+      "id": "R34",
+      "category": "button",
+      "IF": ["tombol_power_tidak_berfungsi", "bisa_nyalakan_via_charging"],
+      "THEN": "kerusakan_tombol_power",
+      "CF": 0.9,
+      "description": "Tombol power tidak respons menunjukkan kerusakan fisik tombol",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R35": {
+      "id": "R35",
+      "category": "button",
+      "IF": ["tombol_volume_tidak_berfungsi"],
+      "THEN": "kerusakan_tombol_volume",
+      "CF": 0.88,
+      "description": "Tombol volume tidak respons menunjukkan kerusakan fisik",
+      "source": "Chen et al. (2023)"
+    },
+    "R36": {
+      "id": "R36",
+      "category": "software",
+      "IF": ["bootloop", "setelah_update_os"],
+      "THEN": "update_gagal",
+      "CF": 0.85,
+      "description": "Bootloop setelah update menunjukkan proses update tidak sempurna",
+      "source": "Zhang et al. (2021)"
+    },
+    "R37": {
+      "id": "R37",
+      "category": "software",
+      "IF": ["restart_sendiri", "tidak_jatuh", "tidak_overheat"],
+      "THEN": "kemungkinan_virus_malware",
+      "CF": 0.72,
+      "description": "Restart otomatis tanpa sebab fisik bisa mengindikasikan malware",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R38": {
+      "id": "R38",
+      "category": "software",
+      "IF": ["iklan_muncul_terus", "aplikasi_tidak_dikenal_terinstall"],
+      "THEN": "adware_terdeteksi",
+      "CF": 0.88,
+      "description": "Iklan berlebihan dan aplikasi tidak dikenal menunjukkan adware",
+      "source": "Chen et al. (2023)"
+    },
+    "R39": {
+      "id": "R39",
+      "category": "storage",
+      "IF": ["storage_penuh_tiba_tiba", "tidak_download_banyak"],
+      "THEN": "kemungkinan_cache_berlebihan",
+      "CF": 0.75,
+      "description": "Storage penuh mendadak biasanya karena cache yang menumpuk",
+      "source": "Zhang et al. (2021)"
+    },
+    "R40": {
+      "id": "R40",
+      "category": "storage",
+      "IF": ["file_hilang", "tidak_sengaja_hapus"],
+      "THEN": "kemungkinan_corrupt_storage",
+      "CF": 0.7,
+      "description": "File hilang tanpa dihapus bisa karena storage corrupt",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R41": {
+      "id": "R41",
+      "category": "water_damage",
+      "IF": ["smartphone_terkena_air", "langsung_mati"],
+      "THEN": "kerusakan_water_damage",
+      "CF": 0.95,
+      "description": "Smartphone mati setelah terkena air menunjukkan water damage",
+      "source": "Chen et al. (2023)"
+    },
+    "R42": {
+      "id": "R42",
+      "category": "water_damage",
+      "IF": ["smartphone_terkena_air", "masih_hidup", "layar_berembun"],
+      "THEN": "water_damage_ringan",
+      "CF": 0.8,
+      "description": "Embun di layar menunjukkan air masuk namun belum ke komponen vital",
+      "source": "Zhang et al. (2021)"
+    },
+    "R43": {
+      "id": "R43",
+      "category": "sensor",
+      "IF": ["auto_rotate_tidak_berfungsi"],
+      "THEN": "kerusakan_gyroscope",
+      "CF": 0.82,
+      "description": "Auto rotate tidak berfungsi menunjukkan masalah sensor gyroscope",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R44": {
+      "id": "R44",
+      "category": "sensor",
+      "IF": ["proximity_sensor_tidak_berfungsi", "layar_tidak_mati_saat_telepon"],
+      "THEN": "kerusakan_proximity_sensor",
+      "CF": 0.85,
+      "description": "Layar tidak mati saat telepon menunjukkan proximity sensor rusak",
+      "source": "Chen et al. (2023)"
+    },
+    "R45": {
+      "id": "R45",
+      "category": "sensor",
+      "IF": ["fingerprint_tidak_berfungsi", "setelah_update"],
+      "THEN": "bug_software_fingerprint",
+      "CF": 0.7,
+      "description": "Fingerprint error setelah update biasanya bug software",
+      "source": "Zhang et al. (2021)"
+    },
+    "R46": {
+      "id": "R46",
+      "category": "gps",
+      "IF": ["gps_tidak_akurat", "di_area_terbuka"],
+      "THEN": "masalah_gps_module",
+      "CF": 0.78,
+      "description": "GPS tidak akurat di area terbuka menunjukkan masalah modul GPS",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R47": {
+      "id": "R47",
+      "category": "motherboard",
+      "IF": ["smartphone_mati_total", "tidak_ada_tanda_kehidupan", "sudah_coba_charging"],
+      "THEN": "kemungkinan_kerusakan_motherboard",
+      "CF": 0.75,
+      "description": "Mati total tanpa respons sama sekali mengindikasikan masalah motherboard",
+      "source": "Chen et al. (2023)"
+    },
+    "R48": {
+      "id": "R48",
+      "category": "combination",
+      "IF": ["kerusakan_lcd_panel", "smartphone_pernah_jatuh"],
+      "THEN": "kerusakan_hardware_impact",
+      "CF": 0.92,
+      "description": "Kerusakan LCD setelah jatuh adalah kerusakan hardware dari benturan",
+      "source": "Zhang et al. (2021)"
+    },
+    "R49": {
+      "id": "R49",
+      "category": "combination",
+      "IF": ["aplikasi_background_berlebihan", "smartphone_lemot"],
+      "THEN": "optimasi_diperlukan",
+      "CF": 0.8,
+      "description": "Aplikasi background berlebihan memerlukan optimasi sistem",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R50": {
+      "id": "R50",
+      "category": "combination",
+      "IF": ["degradasi_baterai", "baterai_berumur_lebih_2tahun"],
+      "THEN": "penggantian_baterai_diperlukan",
+      "CF": 0.9,
+      "description": "Degradasi baterai pada umur >2 tahun memerlukan penggantian",
+      "source": "Chen et al. (2023)"
+    },
+    "R51": {
+      "id": "R51",
+      "category": "urgent",
+      "IF": ["baterai_rusak_berbahaya"],
+      "THEN": "tindakan_darurat_baterai",
+      "CF": 1.0,
+      "description": "Baterai kembung sangat berbahaya, segera matikan dan bawa ke teknisi",
+      "source": "Zhang et al. (2021)"
+    },
+    "R52": {
+      "id": "R52",
+      "category": "urgent",
+      "IF": ["kerusakan_water_damage"],
+      "THEN": "tindakan_darurat_air",
+      "CF": 0.95,
+      "description": "Segera matikan smartphone dan jangan charging setelah terkena air",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R53": {
+      "id": "R53",
+      "category": "preventive",
+      "IF": ["smartphone_normal", "belum_pernah_maintenance"],
+      "THEN": "maintenance_rutin_disarankan",
+      "CF": 0.6,
+      "description": "Maintenance rutin setiap 6 bulan disarankan untuk mencegah kerusakan",
+      "source": "Chen et al. (2023)"
+    },
+    "R54": {
+      "id": "R54",
+      "category": "data_recovery",
+      "IF": ["smartphone_mati_total", "data_penting_ada"],
+      "THEN": "layanan_data_recovery",
+      "CF": 0.7,
+      "description": "Data recovery profesional mungkin diperlukan untuk data penting",
+      "source": "Zhang et al. (2021)"
+    },
+    "R55": {
+      "id": "R55",
+      "category": "warranty",
+      "IF": ["smartphone_berumur_kurang_1tahun", "kerusakan_hardware"],
+      "THEN": "cek_garansi",
+      "CF": 0.85,
+      "description": "Smartphone masih garansi, cek ke service center resmi",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R56": {
+      "id": "R56",
+      "category": "display",
+      "IF": ["layar_tidak_menyala"],
+      "THEN": "kemungkinan_masalah_display",
+      "CF": 0.6,
+      "description": "Layar tidak menyala bisa disebabkan berbagai masalah display",
+      "source": "Zhang et al. (2021)"
+    },
+    "R57": {
+      "id": "R57",
+      "category": "touchscreen",
+      "IF": ["touchscreen_tidak_respons"],
+      "THEN": "kemungkinan_masalah_touchscreen",
+      "CF": 0.65,
+      "description": "Touchscreen tidak respons perlu pengecekan lebih lanjut",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R58": {
+      "id": "R58",
+      "category": "battery",
+      "IF": ["baterai_cepat_habis"],
+      "THEN": "kemungkinan_masalah_baterai",
+      "CF": 0.6,
+      "description": "Baterai cepat habis perlu diagnosis lebih lanjut",
+      "source": "Chen et al. (2023)"
+    },
+    "R59": {
+      "id": "R59",
+      "category": "charging",
+      "IF": ["tidak_bisa_charging"],
+      "THEN": "kemungkinan_masalah_charging",
+      "CF": 0.65,
+      "description": "Tidak bisa charging bisa karena port, kabel, atau IC charging",
+      "source": "Zhang et al. (2021)"
+    },
+    "R60": {
+      "id": "R60",
+      "category": "performance",
+      "IF": ["smartphone_lemot"],
+      "THEN": "kemungkinan_masalah_performa",
+      "CF": 0.6,
+      "description": "Smartphone lemot perlu pengecekan RAM, storage, atau malware",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R61": {
+      "id": "R61",
+      "category": "display",
+      "IF": ["layar_tidak_menyala", "tombol_power_berfungsi"],
+      "THEN": "kemungkinan_kerusakan_lcd",
+      "CF": 0.75,
+      "description": "Layar tidak menyala tapi tombol power berfungsi kemungkinan masalah LCD",
+      "source": "Zhang et al. (2021)"
+    },
+    "R62": {
+      "id": "R62",
+      "category": "touchscreen",
+      "IF": ["touchscreen_tidak_respons", "layar_tampil_normal"],
+      "THEN": "kemungkinan_kerusakan_digitizer",
+      "CF": 0.8,
+      "description": "Layar tampil normal tapi touchscreen mati kemungkinan digitizer rusak",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R63": {
+      "id": "R63",
+      "category": "battery",
+      "IF": ["baterai_cepat_habis", "smartphone_terasa_panas"],
+      "THEN": "kemungkinan_degradasi_atau_malware",
+      "CF": 0.75,
+      "description": "Baterai cepat habis dan panas bisa degradasi baterai atau malware",
+      "source": "Chen et al. (2023)"
+    },
+    "R64": {
+      "id": "R64",
+      "category": "charging",
+      "IF": ["charging_lambat"],
+      "THEN": "kemungkinan_charger_atau_port",
+      "CF": 0.65,
+      "description": "Charging lambat bisa dari charger tidak sesuai atau port kotor",
+      "source": "Zhang et al. (2021)"
+    },
+    "R65": {
+      "id": "R65",
+      "category": "performance",
+      "IF": ["aplikasi_force_close"],
+      "THEN": "kemungkinan_ram_atau_kompatibilitas",
+      "CF": 0.65,
+      "description": "Aplikasi force close bisa RAM penuh atau masalah kompatibilitas",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R66": {
+      "id": "R66",
+      "category": "thermal",
+      "IF": ["smartphone_overheat"],
+      "THEN": "kemungkinan_masalah_thermal",
+      "CF": 0.65,
+      "description": "Smartphone overheat perlu diagnosis processor atau aplikasi background",
+      "source": "Chen et al. (2023)"
+    },
+    "R67": {
+      "id": "R67",
+      "category": "display",
+      "IF": ["layar_retak"],
+      "THEN": "kerusakan_fisik_layar",
+      "CF": 0.9,
+      "description": "Layar retak adalah kerusakan fisik yang memerlukan penggantian",
+      "source": "Zhang et al. (2021)"
+    },
+    "R68": {
+      "id": "R68",
+      "category": "display",
+      "IF": ["layar_bergaris"],
+      "THEN": "kemungkinan_kerusakan_panel_lcd",
+      "CF": 0.75,
+      "description": "Layar bergaris menunjukkan masalah pada panel LCD",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R69": {
+      "id": "R69",
+      "category": "battery",
+      "IF": ["baterai_kembung"],
+      "THEN": "baterai_rusak_harus_ganti",
+      "CF": 0.95,
+      "description": "Baterai kembung sangat berbahaya, harus segera diganti",
+      "source": "Chen et al. (2023)"
+    },
+    "R70": {
+      "id": "R70",
+      "category": "audio",
+      "IF": ["speaker_tidak_bunyi"],
+      "THEN": "kemungkinan_kerusakan_speaker",
+      "CF": 0.75,
+      "description": "Speaker tidak bunyi kemungkinan speaker rusak atau setting bermasalah",
+      "source": "Zhang et al. (2021)"
+    },
+    "R71": {
+      "id": "R71",
+      "category": "software",
+      "IF": ["bootloop"],
+      "THEN": "kemungkinan_masalah_software_serius",
+      "CF": 0.75,
+      "description": "Bootloop menunjukkan masalah software serius, perlu factory reset atau flash ulang",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R72": {
+      "id": "R72",
+      "category": "software",
+      "IF": ["restart_sendiri"],
+      "THEN": "kemungkinan_malware_atau_sistem",
+      "CF": 0.65,
+      "description": "Restart sendiri bisa karena malware atau masalah sistem",
+      "source": "Chen et al. (2023)"
+    },
+    "R73": {
+      "id": "R73",
+      "category": "connectivity",
+      "IF": ["wifi_tidak_bisa_connect"],
+      "THEN": "kemungkinan_masalah_wifi",
+      "CF": 0.7,
+      "description": "WiFi tidak bisa connect bisa masalah modul atau setting",
+      "source": "Zhang et al. (2021)"
+    },
+    "R74": {
+      "id": "R74",
+      "category": "connectivity",
+      "IF": ["bluetooth_tidak_berfungsi"],
+      "THEN": "kemungkinan_masalah_bluetooth",
+      "CF": 0.7,
+      "description": "Bluetooth tidak berfungsi kemungkinan modul bluetooth rusak",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R75": {
+      "id": "R75",
+      "category": "camera",
+      "IF": ["kamera_tidak_berfungsi"],
+      "THEN": "kemungkinan_masalah_kamera",
+      "CF": 0.65,
+      "description": "Kamera tidak berfungsi perlu cek software atau hardware",
+      "source": "Chen et al. (2023)"
+    },
+    "R76": {
+      "id": "R76",
+      "category": "physical",
+      "IF": ["smartphone_terkena_air"],
+      "THEN": "risiko_water_damage",
+      "CF": 0.85,
+      "description": "Smartphone terkena air berisiko water damage, segera matikan",
+      "source": "Zhang et al. (2021)"
+    },
+    "R77": {
+      "id": "R77",
+      "category": "storage",
+      "IF": ["storage_hampir_penuh"],
+      "THEN": "perlu_cleanup_storage",
+      "CF": 0.8,
+      "description": "Storage hampir penuh menyebabkan smartphone lemot",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "R78": {
+      "id": "R78",
+      "category": "button",
+      "IF": ["tombol_power_tidak_berfungsi"],
+      "THEN": "kerusakan_tombol_power_fisik",
+      "CF": 0.85,
+      "description": "Tombol power tidak berfungsi kemungkinan rusak fisik",
+      "source": "Chen et al. (2023)"
+    },
+    "R79": {
+      "id": "R79",
+      "category": "sensor",
+      "IF": ["fingerprint_tidak_berfungsi"],
+      "THEN": "kemungkinan_masalah_fingerprint",
+      "CF": 0.65,
+      "description": "Fingerprint tidak berfungsi bisa masalah sensor atau software",
+      "source": "Zhang et al. (2021)"
+    },
+    "R80": {
+      "id": "R80",
+      "category": "general",
+      "IF": ["smartphone_pernah_jatuh"],
+      "THEN": "risiko_kerusakan_hardware",
+      "CF": 0.7,
+      "description": "Smartphone pernah jatuh berisiko kerusakan hardware internal",
+      "source": "Kumar & Sharma (2022)"
+    }
+  }
+}

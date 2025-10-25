@@ -1,0 +1,473 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_symptoms": 60,
+    "categories": ["display", "battery", "charging", "performance", "audio", "connectivity", "camera", "sensor", "physical"]
+  },
+  "symptoms": {
+    "layar_tidak_menyala": {
+      "id": "layar_tidak_menyala",
+      "name": "Layar tidak menyala",
+      "category": "display",
+      "description": "Layar smartphone dalam keadaan gelap total dan tidak menampilkan apapun",
+      "severity": "high",
+      "question": "Apakah layar smartphone Anda tidak menyala sama sekali?"
+    },
+    "layar_retak": {
+      "id": "layar_retak",
+      "name": "Layar retak/pecah",
+      "category": "display",
+      "description": "Terdapat keretakan fisik pada layar smartphone",
+      "severity": "medium",
+      "question": "Apakah layar smartphone Anda mengalami keretakan atau pecah?"
+    },
+    "layar_bergaris": {
+      "id": "layar_bergaris",
+      "name": "Layar bergaris",
+      "category": "display",
+      "description": "Muncul garis-garis pada layar baik horizontal maupun vertikal",
+      "severity": "medium",
+      "question": "Apakah ada garis-garis yang muncul pada layar?"
+    },
+    "warna_tidak_normal": {
+      "id": "warna_tidak_normal",
+      "name": "Warna layar tidak normal",
+      "category": "display",
+      "description": "Warna yang ditampilkan layar tidak sesuai atau berubah-ubah",
+      "severity": "medium",
+      "question": "Apakah warna yang ditampilkan layar terlihat aneh atau tidak normal?"
+    },
+    "layar_tampil_normal": {
+      "id": "layar_tampil_normal",
+      "name": "Layar tampil normal",
+      "category": "display",
+      "description": "Layar masih dapat menampilkan gambar dengan baik",
+      "severity": "low",
+      "question": "Apakah tampilan layar masih terlihat normal?"
+    },
+    "touchscreen_tidak_respons": {
+      "id": "touchscreen_tidak_respons",
+      "name": "Touchscreen tidak merespons",
+      "category": "display",
+      "description": "Layar sentuh tidak merespons sentuhan sama sekali",
+      "severity": "high",
+      "question": "Apakah touchscreen tidak merespons sama sekali ketika disentuh?"
+    },
+    "touchscreen_ghost_touch": {
+      "id": "touchscreen_ghost_touch",
+      "name": "Ghost touch (sentuhan hantu)",
+      "category": "display",
+      "description": "Layar bereaksi seolah disentuh padahal tidak ada sentuhan",
+      "severity": "medium",
+      "question": "Apakah layar sering bereaksi sendiri tanpa Anda sentuh?"
+    },
+    "touchscreen_delay": {
+      "id": "touchscreen_delay",
+      "name": "Touchscreen delay/lambat",
+      "category": "display",
+      "description": "Respons touchscreen terasa lambat atau tertunda",
+      "severity": "low",
+      "question": "Apakah respons touchscreen terasa lambat atau delay?"
+    },
+    "sentuhan_acak_terjadi": {
+      "id": "sentuhan_acak_terjadi",
+      "name": "Sentuhan acak terjadi",
+      "category": "display",
+      "description": "Terjadi sentuhan-sentuhan acak yang tidak terkontrol",
+      "severity": "medium",
+      "question": "Apakah terjadi sentuhan-sentuhan acak di layar?"
+    },
+    "respons_lambat": {
+      "id": "respons_lambat",
+      "name": "Respons sistem lambat",
+      "category": "performance",
+      "description": "Sistem secara keseluruhan terasa lambat",
+      "severity": "medium",
+      "question": "Apakah smartphone terasa sangat lambat saat digunakan?"
+    },
+    "baterai_cepat_habis": {
+      "id": "baterai_cepat_habis",
+      "name": "Baterai cepat habis",
+      "category": "battery",
+      "description": "Daya baterai berkurang dengan sangat cepat",
+      "severity": "medium",
+      "question": "Apakah baterai smartphone cepat habis meskipun baru dicharge?"
+    },
+    "baterai_kembung": {
+      "id": "baterai_kembung",
+      "name": "Baterai kembung/menggembung",
+      "category": "battery",
+      "description": "Baterai mengalami pembengkakan fisik",
+      "severity": "critical",
+      "question": "Apakah baterai terlihat kembung atau casing smartphone terangkat?"
+    },
+    "persentase_baterai_loncat": {
+      "id": "persentase_baterai_loncat",
+      "name": "Persentase baterai tidak stabil",
+      "category": "battery",
+      "description": "Indikator persentase baterai naik turun tidak wajar",
+      "severity": "low",
+      "question": "Apakah persentase baterai sering loncat-loncat tidak wajar?"
+    },
+    "baterai_berumur_kurang_1tahun": {
+      "id": "baterai_berumur_kurang_1tahun",
+      "name": "Baterai berumur < 1 tahun",
+      "category": "battery",
+      "description": "Smartphone masih relatif baru",
+      "severity": "info",
+      "question": "Apakah smartphone Anda berumur kurang dari 1 tahun?"
+    },
+    "baterai_berumur_lebih_2tahun": {
+      "id": "baterai_berumur_lebih_2tahun",
+      "name": "Baterai berumur > 2 tahun",
+      "category": "battery",
+      "description": "Smartphone sudah cukup lama digunakan",
+      "severity": "info",
+      "question": "Apakah smartphone Anda sudah digunakan lebih dari 2 tahun?"
+    },
+    "tidak_bisa_charging": {
+      "id": "tidak_bisa_charging",
+      "name": "Tidak bisa charging",
+      "category": "charging",
+      "description": "Smartphone tidak bisa di-charge sama sekali",
+      "severity": "high",
+      "question": "Apakah smartphone tidak bisa di-charge sama sekali?"
+    },
+    "charging_lambat": {
+      "id": "charging_lambat",
+      "name": "Charging sangat lambat",
+      "category": "charging",
+      "description": "Proses pengisian daya memakan waktu sangat lama",
+      "severity": "medium",
+      "question": "Apakah proses charging memakan waktu sangat lama?"
+    },
+    "charging_putus_sambung": {
+      "id": "charging_putus_sambung",
+      "name": "Charging putus-sambung",
+      "category": "charging",
+      "description": "Koneksi charging sering terputus dan menyambung kembali",
+      "severity": "medium",
+      "question": "Apakah charging sering putus-sambung?"
+    },
+    "indikator_charging_tidak_muncul": {
+      "id": "indikator_charging_tidak_muncul",
+      "name": "Indikator charging tidak muncul",
+      "category": "charging",
+      "description": "Tidak ada indikator yang menunjukkan smartphone sedang di-charge",
+      "severity": "high",
+      "question": "Apakah tidak ada indikator charging yang muncul saat kabel dipasang?"
+    },
+    "port_goyang": {
+      "id": "port_goyang",
+      "name": "Port USB goyang/longgar",
+      "category": "charging",
+      "description": "Port charging terasa longgar saat kabel dipasang",
+      "severity": "medium",
+      "question": "Apakah port charging terasa goyang atau longgar?"
+    },
+    "kabel_data_berfungsi": {
+      "id": "kabel_data_berfungsi",
+      "name": "Kabel data berfungsi normal",
+      "category": "charging",
+      "description": "Kabel charging sudah dicoba dan berfungsi di perangkat lain",
+      "severity": "info",
+      "question": "Apakah kabel charging berfungsi normal di perangkat lain?"
+    },
+    "charger_berfungsi": {
+      "id": "charger_berfungsi",
+      "name": "Charger berfungsi normal",
+      "category": "charging",
+      "description": "Charger sudah dicoba dan berfungsi untuk perangkat lain",
+      "severity": "info",
+      "question": "Apakah charger berfungsi normal di perangkat lain?"
+    },
+    "kabel_terkoneksi_normal": {
+      "id": "kabel_terkoneksi_normal",
+      "name": "Kabel terkoneksi normal",
+      "category": "charging",
+      "description": "Kabel terpasang dengan baik tanpa masalah fisik",
+      "severity": "info",
+      "question": "Apakah kabel terpasang dengan baik tanpa kendala?"
+    },
+    "aplikasi_force_close": {
+      "id": "aplikasi_force_close",
+      "name": "Aplikasi sering force close",
+      "category": "performance",
+      "description": "Aplikasi sering tertutup sendiri secara tiba-tiba",
+      "severity": "medium",
+      "question": "Apakah aplikasi sering tertutup sendiri (force close)?"
+    },
+    "smartphone_lemot": {
+      "id": "smartphone_lemot",
+      "name": "Smartphone lemot/lag",
+      "category": "performance",
+      "description": "Performa smartphone sangat lambat",
+      "severity": "medium",
+      "question": "Apakah smartphone terasa sangat lemot/lag?"
+    },
+    "smartphone_normal_digunakan": {
+      "id": "smartphone_normal_digunakan",
+      "name": "Penggunaan normal",
+      "category": "performance",
+      "description": "Smartphone digunakan dengan cara normal tanpa beban berat",
+      "severity": "info",
+      "question": "Apakah Anda menggunakan smartphone secara normal (tidak gaming berat)?"
+    },
+    "smartphone_terasa_panas": {
+      "id": "smartphone_terasa_panas",
+      "name": "Smartphone panas berlebihan",
+      "category": "thermal",
+      "description": "Smartphone terasa sangat panas saat digunakan",
+      "severity": "medium",
+      "question": "Apakah smartphone terasa sangat panas?"
+    },
+    "smartphone_overheat": {
+      "id": "smartphone_overheat",
+      "name": "Smartphone overheat",
+      "category": "thermal",
+      "description": "Smartphone mengalami panas berlebihan hingga muncul warning",
+      "severity": "high",
+      "question": "Apakah smartphone overheat hingga muncul peringatan?"
+    },
+    "smartphone_panas_saat_charging": {
+      "id": "smartphone_panas_saat_charging",
+      "name": "Panas saat charging",
+      "category": "thermal",
+      "description": "Smartphone menjadi sangat panas ketika di-charge",
+      "severity": "medium",
+      "question": "Apakah smartphone menjadi sangat panas saat di-charge?"
+    },
+    "saat_idle": {
+      "id": "saat_idle",
+      "name": "Terjadi saat idle/tidak digunakan",
+      "category": "thermal",
+      "description": "Masalah terjadi meskipun smartphone tidak sedang digunakan",
+      "severity": "info",
+      "question": "Apakah masalah terjadi bahkan saat smartphone tidak digunakan?"
+    },
+    "saat_gaming": {
+      "id": "saat_gaming",
+      "name": "Terjadi saat gaming",
+      "category": "thermal",
+      "description": "Masalah terjadi saat bermain game berat",
+      "severity": "info",
+      "question": "Apakah masalah terjadi saat bermain game?"
+    },
+    "suhu_normal_kembali": {
+      "id": "suhu_normal_kembali",
+      "name": "Suhu kembali normal",
+      "category": "thermal",
+      "description": "Suhu smartphone kembali normal setelah aktivitas berat selesai",
+      "severity": "info",
+      "question": "Apakah suhu kembali normal setelah berhenti menggunakan?"
+    },
+    "terus_menerus": {
+      "id": "terus_menerus",
+      "name": "Terjadi terus menerus",
+      "category": "general",
+      "description": "Masalah terjadi secara konsisten dan terus menerus",
+      "severity": "high",
+      "question": "Apakah masalah terjadi terus menerus tanpa henti?"
+    },
+    "storage_hampir_penuh": {
+      "id": "storage_hampir_penuh",
+      "name": "Storage hampir penuh",
+      "category": "performance",
+      "description": "Kapasitas penyimpanan internal hampir penuh",
+      "severity": "medium",
+      "question": "Apakah storage internal Anda hampir penuh?"
+    },
+    "storage_cukup": {
+      "id": "storage_cukup",
+      "name": "Storage masih cukup",
+      "category": "performance",
+      "description": "Masih ada ruang penyimpanan yang cukup",
+      "severity": "info",
+      "question": "Apakah storage internal masih memiliki ruang cukup?"
+    },
+    "ram_cukup": {
+      "id": "ram_cukup",
+      "name": "RAM masih tersedia",
+      "category": "performance",
+      "description": "Masih ada RAM yang tersedia",
+      "severity": "info",
+      "question": "Apakah RAM smartphone masih tersedia cukup banyak?"
+    },
+    "terjadi_pada_semua_aplikasi": {
+      "id": "terjadi_pada_semua_aplikasi",
+      "name": "Terjadi pada semua aplikasi",
+      "category": "performance",
+      "description": "Masalah terjadi pada semua atau banyak aplikasi",
+      "severity": "high",
+      "question": "Apakah masalah terjadi pada semua aplikasi?"
+    },
+    "terjadi_pada_aplikasi_tertentu": {
+      "id": "terjadi_pada_aplikasi_tertentu",
+      "name": "Hanya pada aplikasi tertentu",
+      "category": "performance",
+      "description": "Masalah hanya terjadi pada aplikasi spesifik",
+      "severity": "low",
+      "question": "Apakah masalah hanya terjadi pada aplikasi tertentu saja?"
+    },
+    "aplikasi_baru_diinstall": {
+      "id": "aplikasi_baru_diinstall",
+      "name": "Aplikasi baru diinstall",
+      "category": "performance",
+      "description": "Aplikasi yang bermasalah baru saja diinstall",
+      "severity": "info",
+      "question": "Apakah aplikasi tersebut baru saja Anda install?"
+    },
+    "tombol_power_tidak_respons": {
+      "id": "tombol_power_tidak_respons",
+      "name": "Tombol power tidak respons",
+      "category": "button",
+      "description": "Tombol power tidak merespons ketika ditekan",
+      "severity": "high",
+      "question": "Apakah tombol power tidak merespons sama sekali?"
+    },
+    "tombol_power_berfungsi": {
+      "id": "tombol_power_berfungsi",
+      "name": "Tombol power berfungsi",
+      "category": "button",
+      "description": "Tombol power masih berfungsi normal",
+      "severity": "info",
+      "question": "Apakah tombol power masih berfungsi dengan baik?"
+    },
+    "tombol_fisik_berfungsi": {
+      "id": "tombol_fisik_berfungsi",
+      "name": "Tombol fisik berfungsi",
+      "category": "button",
+      "description": "Semua tombol fisik masih berfungsi normal",
+      "severity": "info",
+      "question": "Apakah semua tombol fisik (power, volume) masih berfungsi?"
+    },
+    "led_notifikasi_menyala": {
+      "id": "led_notifikasi_menyala",
+      "name": "LED notifikasi menyala",
+      "category": "display",
+      "description": "LED notifikasi masih menyala menunjukkan perangkat hidup",
+      "severity": "info",
+      "question": "Apakah LED notifikasi masih menyala?"
+    },
+    "speaker_tidak_bunyi": {
+      "id": "speaker_tidak_bunyi",
+      "name": "Speaker tidak mengeluarkan suara",
+      "category": "audio",
+      "description": "Speaker tidak mengeluarkan suara sama sekali",
+      "severity": "high",
+      "question": "Apakah speaker tidak mengeluarkan suara sama sekali?"
+    },
+    "suara_pecah": {
+      "id": "suara_pecah",
+      "name": "Suara pecah/distorsi",
+      "category": "audio",
+      "description": "Suara yang keluar pecah atau terdistorsi",
+      "severity": "medium",
+      "question": "Apakah suara yang keluar terdengar pecah atau terdistorsi?"
+    },
+    "volume_maksimal": {
+      "id": "volume_maksimal",
+      "name": "Terjadi pada volume maksimal",
+      "category": "audio",
+      "description": "Masalah terjadi ketika volume dinaikkan maksimal",
+      "severity": "info",
+      "question": "Apakah masalah terjadi saat volume maksimal?"
+    },
+    "headphone_berfungsi": {
+      "id": "headphone_berfungsi",
+      "name": "Headphone berfungsi normal",
+      "category": "audio",
+      "description": "Audio normal saat menggunakan headphone",
+      "severity": "info",
+      "question": "Apakah audio normal saat menggunakan headphone?"
+    },
+    "casing_terangkat": {
+      "id": "casing_terangkat",
+      "name": "Casing terangkat",
+      "category": "physical",
+      "description": "Casing belakang smartphone terangkat atau tidak rapat",
+      "severity": "high",
+      "question": "Apakah casing belakang smartphone terangkat?"
+    },
+    "smartphone_pernah_jatuh": {
+      "id": "smartphone_pernah_jatuh",
+      "name": "Smartphone pernah jatuh",
+      "category": "physical",
+      "description": "Smartphone pernah mengalami benturan atau jatuh",
+      "severity": "info",
+      "question": "Apakah smartphone pernah jatuh atau terbentur?"
+    },
+    "smartphone_terkena_air": {
+      "id": "smartphone_terkena_air",
+      "name": "Smartphone terkena air",
+      "category": "physical",
+      "description": "Smartphone pernah terkena air atau cairan",
+      "severity": "high",
+      "question": "Apakah smartphone pernah terkena air atau cairan?"
+    },
+    "layar_berembun": {
+      "id": "layar_berembun",
+      "name": "Layar berembun",
+      "category": "display",
+      "description": "Terdapat embun di dalam layar",
+      "severity": "medium",
+      "question": "Apakah ada embun di dalam layar smartphone?"
+    },
+    "restart_sendiri": {
+      "id": "restart_sendiri",
+      "name": "Restart sendiri",
+      "category": "software",
+      "description": "Smartphone restart otomatis tanpa input pengguna",
+      "severity": "medium",
+      "question": "Apakah smartphone sering restart sendiri?"
+    },
+    "bootloop": {
+      "id": "bootloop",
+      "name": "Bootloop",
+      "category": "software",
+      "description": "Smartphone stuck di logo dan terus restart",
+      "severity": "high",
+      "question": "Apakah smartphone stuck di logo dan terus restart (bootloop)?"
+    },
+    "setelah_update_os": {
+      "id": "setelah_update_os",
+      "name": "Setelah update OS",
+      "category": "software",
+      "description": "Masalah muncul setelah melakukan update sistem operasi",
+      "severity": "info",
+      "question": "Apakah masalah muncul setelah update sistem operasi?"
+    },
+    "smartphone_berumur_kurang_1tahun": {
+      "id": "smartphone_berumur_kurang_1tahun",
+      "name": "Smartphone < 1 tahun",
+      "category": "general",
+      "description": "Smartphone masih berumur kurang dari 1 tahun",
+      "severity": "info",
+      "question": "Apakah smartphone Anda berumur kurang dari 1 tahun?"
+    },
+    "indikator_tidak_akurat": {
+      "id": "indikator_tidak_akurat",
+      "name": "Indikator tidak akurat",
+      "category": "battery",
+      "description": "Indikator baterai menunjukkan angka yang tidak akurat",
+      "severity": "low",
+      "question": "Apakah indikator baterai tidak akurat?"
+    },
+    "langsung_mati": {
+      "id": "langsung_mati",
+      "name": "Langsung mati",
+      "category": "general",
+      "description": "Smartphone langsung mati setelah kejadian tertentu",
+      "severity": "high",
+      "question": "Apakah smartphone langsung mati setelah kejadian tersebut?"
+    },
+    "masih_hidup": {
+      "id": "masih_hidup",
+      "name": "Smartphone masih hidup",
+      "category": "general",
+      "description": "Smartphone masih bisa dinyalakan dan berfungsi",
+      "severity": "info",
+      "question": "Apakah smartphone masih bisa dinyalakan?"
+    }
+  }
+}
