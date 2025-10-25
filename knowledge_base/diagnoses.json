@@ -1,0 +1,1003 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "total_diagnoses": 30,
+    "categories": ["hardware", "software", "hybrid"]
+  },
+  "diagnoses": {
+    "kerusakan_lcd_backlight": {
+      "id": "kerusakan_lcd_backlight",
+      "name": "Kerusakan LCD Backlight",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Backlight LCD yang rusak menyebabkan layar gelap meskipun sistem masih berfungsi. Lampu latar tidak menyala sehingga tampilan tidak terlihat.",
+      "causes": [
+        "Komponen backlight rusak akibat usia",
+        "Kerusakan akibat benturan",
+        "Short circuit pada jalur backlight",
+        "IC backlight driver rusak"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Coba nyalakan layar di tempat gelap dan sorotkan senter ke layar",
+          "detail": "Jika masih terlihat samar-samar, kemungkinan besar backlight rusak"
+        },
+        {
+          "step": 2,
+          "action": "Bawa ke teknisi profesional",
+          "detail": "Penggantian backlight memerlukan keahlian khusus"
+        },
+        {
+          "step": 3,
+          "action": "Estimasi biaya: Rp 300.000 - Rp 800.000",
+          "detail": "Tergantung merek dan tipe smartphone"
+        }
+      ],
+      "prevention": [
+        "Hindari tekanan berlebihan pada layar",
+        "Gunakan case pelindung berkualitas",
+        "Hindari smartphone dari suhu ekstrem"
+      ],
+      "estimated_cost": "300000-800000",
+      "repair_difficulty": "high",
+      "source": "Zhang et al. (2021)"
+    },
+    "kerusakan_digitizer_fisik": {
+      "id": "kerusakan_digitizer_fisik",
+      "name": "Kerusakan Digitizer Fisik",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Digitizer adalah lapisan sensor sentuh pada layar. Kerusakan fisik menyebabkan touchscreen tidak berfungsi.",
+      "causes": [
+        "Layar retak atau pecah",
+        "Benturan keras pada layar",
+        "Tekanan berlebihan",
+        "Konektor digitizer lepas"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Restart smartphone",
+          "detail": "Kadang masalah bisa teratasi sementara dengan restart"
+        },
+        {
+          "step": 2,
+          "action": "Coba gunakan mouse USB OTG",
+          "detail": "Untuk backup data sebelum perbaikan"
+        },
+        {
+          "step": 3,
+          "action": "Ganti digitizer atau full set layar",
+          "detail": "Estimasi: Rp 200.000 - Rp 1.500.000"
+        }
+      ],
+      "prevention": [
+        "Pasang tempered glass berkualitas",
+        "Gunakan case dengan screen protector",
+        "Hindari menaruh smartphone dengan benda keras"
+      ],
+      "estimated_cost": "200000-1500000",
+      "repair_difficulty": "medium",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kerusakan_lcd_panel": {
+      "id": "kerusakan_lcd_panel",
+      "name": "Kerusakan LCD Panel",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Panel LCD rusak menyebabkan tampilan bergaris, warna tidak normal, atau dead pixel.",
+      "causes": [
+        "Benturan atau tekanan pada layar",
+        "Kerusakan internal panel",
+        "Kebocoran liquid crystal",
+        "Konektor LCD longgar"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek dengan teliti apakah ada area yang tertekan",
+          "detail": "Kadang masalah bisa dari tekanan eksternal"
+        },
+        {
+          "step": 2,
+          "action": "Ganti LCD panel atau full set layar",
+          "detail": "Biaya: Rp 400.000 - Rp 2.000.000"
+        },
+        {
+          "step": 3,
+          "action": "Backup data terlebih dahulu",
+          "detail": "Sebelum melakukan perbaikan"
+        }
+      ],
+      "prevention": [
+        "Jangan menaruh smartphone di saku belakang",
+        "Hindari tekanan pada layar",
+        "Gunakan flip cover untuk proteksi"
+      ],
+      "estimated_cost": "400000-2000000",
+      "repair_difficulty": "medium",
+      "source": "Zhang et al. (2021)"
+    },
+    "kerusakan_touchscreen_digitizer": {
+      "id": "kerusakan_touchscreen_digitizer",
+      "name": "Kerusakan Touchscreen Digitizer",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Touchscreen tidak merespons meskipun layar tampil normal, menunjukkan kerusakan pada lapisan digitizer.",
+      "causes": [
+        "Kerusakan komponen digitizer",
+        "Konektor digitizer longgar",
+        "IC touchscreen rusak",
+        "Kalibrasi touchscreen error"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Coba kalibrasi touchscreen melalui settings",
+          "detail": "Settings > Display > Touchscreen Calibration"
+        },
+        {
+          "step": 2,
+          "action": "Restart dalam safe mode",
+          "detail": "Untuk mengecek apakah masalah dari software"
+        },
+        {
+          "step": 3,
+          "action": "Jika masih bermasalah, ganti digitizer",
+          "detail": "Biaya: Rp 200.000 - Rp 500.000"
+        }
+      ],
+      "prevention": [
+        "Pasang screen protector berkualitas",
+        "Bersihkan layar secara rutin",
+        "Hindari penggunaan dengan tangan basah"
+      ],
+      "estimated_cost": "200000-500000",
+      "repair_difficulty": "medium",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kerusakan_touchscreen_controller": {
+      "id": "kerusakan_touchscreen_controller",
+      "name": "Kerusakan Touchscreen Controller",
+      "type": "hardware",
+      "severity": "medium",
+      "description": "IC controller touchscreen rusak menyebabkan ghost touch atau sentuhan tidak akurat.",
+      "causes": [
+        "IC touchscreen controller rusak",
+        "Short circuit pada jalur touchscreen",
+        "Kerusakan akibat panas berlebihan",
+        "Kerusakan akibat air"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Matikan fitur 'Glove Mode' jika ada",
+          "detail": "Fitur ini kadang menyebabkan ghost touch"
+        },
+        {
+          "step": 2,
+          "action": "Bersihkan layar dan pastikan kering",
+          "detail": "Air atau kotoran bisa menyebabkan ghost touch"
+        },
+        {
+          "step": 3,
+          "action": "Jika persisten, ganti IC touchscreen controller",
+          "detail": "Biaya: Rp 150.000 - Rp 400.000"
+        }
+      ],
+      "prevention": [
+        "Hindari penggunaan di lingkungan lembab",
+        "Jangan gunakan saat smartphone overheat",
+        "Gunakan charger original"
+      ],
+      "estimated_cost": "150000-400000",
+      "repair_difficulty": "high",
+      "source": "Chen et al. (2023)"
+    },
+    "aplikasi_background_berlebihan": {
+      "id": "aplikasi_background_berlebihan",
+      "name": "Aplikasi Background Berlebihan",
+      "type": "software",
+      "severity": "medium",
+      "description": "Terlalu banyak aplikasi berjalan di background menguras baterai dan menurunkan performa.",
+      "causes": [
+        "Auto-start aplikasi terlalu banyak",
+        "Aplikasi tidak di-force stop",
+        "Sync otomatis terlalu banyak aplikasi",
+        "Background data tidak dibatasi"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek aplikasi yang berjalan di background",
+          "detail": "Settings > Apps > Running Apps"
+        },
+        {
+          "step": 2,
+          "action": "Matikan auto-start untuk aplikasi tidak penting",
+          "detail": "Settings > Apps > Auto-start Management"
+        },
+        {
+          "step": 3,
+          "action": "Batasi background data",
+          "detail": "Settings > Data Usage > Restrict Background Data"
+        },
+        {
+          "step": 4,
+          "action": "Gunakan battery optimization",
+          "detail": "Settings > Battery > App Battery Usage"
+        }
+      ],
+      "prevention": [
+        "Install aplikasi seperlunya",
+        "Review permission aplikasi secara berkala",
+        "Gunakan lite version aplikasi jika tersedia"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "low",
+      "source": "Chen et al. (2023)"
+    },
+    "degradasi_baterai": {
+      "id": "degradasi_baterai",
+      "name": "Degradasi Baterai",
+      "type": "hardware",
+      "severity": "medium",
+      "description": "Baterai mengalami penurunan kapasitas alami seiring waktu penggunaan.",
+      "causes": [
+        "Usia baterai sudah tua (>2 tahun)",
+        "Siklus charge/discharge berulang",
+        "Charging kebiasaan buruk (overcharge)",
+        "Suhu ekstrem saat penggunaan"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek battery health",
+          "detail": "Gunakan aplikasi seperti AccuBattery atau cek di service center"
+        },
+        {
+          "step": 2,
+          "action": "Jika kapasitas < 80%, pertimbangkan ganti baterai",
+          "detail": "Biaya: Rp 100.000 - Rp 500.000"
+        },
+        {
+          "step": 3,
+          "action": "Sementara, optimalkan penggunaan baterai",
+          "detail": "Aktifkan battery saver, kurangi brightness"
+        }
+      ],
+      "prevention": [
+        "Jangan charge sampai 100% terus menerus",
+        "Jaga level baterai antara 20-80%",
+        "Hindari penggunaan saat charging",
+        "Gunakan charger original"
+      ],
+      "estimated_cost": "100000-500000",
+      "repair_difficulty": "low",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "baterai_rusak_berbahaya": {
+      "id": "baterai_rusak_berbahaya",
+      "name": "Baterai Rusak Berbahaya (Kembung)",
+      "type": "hardware",
+      "severity": "critical",
+      "description": "Baterai kembung sangat berbahaya dan bisa meledak. Harus segera ditangani.",
+      "causes": [
+        "Overcharging berkepanjangan",
+        "Baterai sudah sangat tua",
+        "Suhu ekstrem",
+        "Kerusakan internal baterai",
+        "Charger tidak sesuai spesifikasi"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "SEGERA MATIKAN SMARTPHONE",
+          "detail": "Jangan gunakan sama sekali"
+        },
+        {
+          "step": 2,
+          "action": "JANGAN CHARGING",
+          "detail": "Sangat berbahaya jika di-charge"
+        },
+        {
+          "step": 3,
+          "action": "Bawa ke service center SEGERA",
+          "detail": "Baterai harus diganti segera oleh profesional"
+        },
+        {
+          "step": 4,
+          "action": "Jauhkan dari anak-anak dan benda mudah terbakar",
+          "detail": "Tempatkan di area aman dan berventilasi"
+        }
+      ],
+      "prevention": [
+        "Jangan menggunakan charger abal-abal",
+        "Hindari charging semalaman",
+        "Jangan gunakan smartphone saat overheat",
+        "Ganti baterai sebelum umur 3 tahun"
+      ],
+      "estimated_cost": "100000-600000",
+      "repair_difficulty": "low",
+      "urgency": "critical",
+      "source": "Zhang et al. (2021)"
+    },
+    "kalibrasi_baterai_diperlukan": {
+      "id": "kalibrasi_baterai_diperlukan",
+      "name": "Kalibrasi Baterai Diperlukan",
+      "type": "software",
+      "severity": "low",
+      "description": "Indikator baterai tidak sinkron dengan kapasitas sebenarnya, memerlukan kalibrasi ulang.",
+      "causes": [
+        "Sistem tidak akurat membaca kapasitas",
+        "Setelah update sistem",
+        "Charging tidak teratur",
+        "Battery stats corrupt"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Discharge baterai hingga mati (0%)",
+          "detail": "Gunakan hingga benar-benar mati sendiri"
+        },
+        {
+          "step": 2,
+          "action": "Charge hingga 100% tanpa gangguan",
+          "detail": "Jangan gunakan saat charging, charge hingga penuh"
+        },
+        {
+          "step": 3,
+          "action": "Biarkan charging 2 jam setelah 100%",
+          "detail": "Untuk kalibrasi penuh"
+        },
+        {
+          "step": 4,
+          "action": "Cabut dan gunakan normal",
+          "detail": "Ulangi 2-3 kali jika perlu"
+        }
+      ],
+      "prevention": [
+        "Lakukan kalibrasi setiap 3 bulan",
+        "Charge dengan pola teratur",
+        "Jangan sering biarkan baterai 0%"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "very_low",
+      "source": "Chen et al. (2023)"
+    },
+    "kerusakan_port_usb": {
+      "id": "kerusakan_port_usb",
+      "name": "Kerusakan Port USB",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Port charging rusak sehingga tidak bisa charging atau koneksi tidak stabil.",
+      "causes": [
+        "Port kotor atau berdebu",
+        "Pin port bengkok atau patah",
+        "Konektor longgar akibat pemakaian",
+        "Korosi akibat air/keringat"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Bersihkan port dengan sikat halus",
+          "detail": "Gunakan sikat gigi bekas yang lembut atau tusuk gigi hati-hati"
+        },
+        {
+          "step": 2,
+          "action": "Coba wireless charging jika tersedia",
+          "detail": "Alternatif sementara"
+        },
+        {
+          "step": 3,
+          "action": "Ganti port USB di service center",
+          "detail": "Biaya: Rp 75.000 - Rp 300.000"
+        }
+      ],
+      "prevention": [
+        "Cabut kabel dengan hati-hati (jangan tarik kabel)",
+        "Bersihkan port secara berkala",
+        "Hindari charging di tempat lembab",
+        "Gunakan kabel berkualitas baik"
+      ],
+      "estimated_cost": "75000-300000",
+      "repair_difficulty": "medium",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kemungkinan_charger_tidak_sesuai": {
+      "id": "kemungkinan_charger_tidak_sesuai",
+      "name": "Charger Tidak Sesuai Spesifikasi",
+      "type": "software",
+      "severity": "low",
+      "description": "Charger yang digunakan tidak sesuai spesifikasi smartphone sehingga charging lambat.",
+      "causes": [
+        "Ampere charger terlalu rendah",
+        "Charger bukan original/tidak sesuai",
+        "Kabel rusak atau tidak mendukung fast charging",
+        "Port charger kotor"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek spesifikasi charger smartphone Anda",
+          "detail": "Lihat di buku manual atau body charger original"
+        },
+        {
+          "step": 2,
+          "action": "Gunakan charger original atau sesuai spesifikasi",
+          "detail": "Minimal 5V 2A untuk smartphone modern"
+        },
+        {
+          "step": 3,
+          "action": "Ganti kabel jika perlu",
+          "detail": "Kabel rusak bisa memperlambat charging"
+        }
+      ],
+      "prevention": [
+        "Selalu gunakan charger original",
+        "Jika beli charger baru, pastikan spesifikasi sesuai",
+        "Hindari charger murah tidak bermerek"
+      ],
+      "estimated_cost": "50000-300000",
+      "repair_difficulty": "very_low",
+      "source": "Zhang et al. (2021)"
+    },
+    "port_usb_longgar": {
+      "id": "port_usb_longgar",
+      "name": "Port USB Longgar",
+      "type": "hardware",
+      "severity": "medium",
+      "description": "Port USB longgar menyebabkan koneksi charging tidak stabil.",
+      "causes": [
+        "Pemakaian berulang",
+        "Cabut kabel dengan kasar",
+        "Port aus atau rusak mekanis",
+        "Solder port lemah"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Posisikan kabel pada sudut tertentu",
+          "detail": "Solusi sementara sampai diperbaiki"
+        },
+        {
+          "step": 2,
+          "action": "Ganti port USB",
+          "detail": "Biaya: Rp 75.000 - Rp 250.000"
+        },
+        {
+          "step": 3,
+          "action": "Pertimbangkan wireless charging",
+          "detail": "Jika smartphone support"
+        }
+      ],
+      "prevention": [
+        "Cabut kabel dengan lembut dan lurus",
+        "Jangan menggunakan smartphone saat charging dalam posisi aneh",
+        "Gunakan magnetic charging cable"
+      ],
+      "estimated_cost": "75000-250000",
+      "repair_difficulty": "medium",
+      "source": "Chen et al. (2023)"
+    },
+    "masalah_ic_charging": {
+      "id": "masalah_ic_charging",
+      "name": "Kerusakan IC Charging",
+      "type": "hardware",
+      "severity": "high",
+      "description": "IC charging yang mengatur proses pengisian daya mengalami kerusakan.",
+      "causes": [
+        "Panas berlebihan saat charging",
+        "Tegangan tidak stabil",
+        "Short circuit",
+        "Usia komponen"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Hentikan penggunaan saat charging",
+          "detail": "Untuk menghindari kerusakan lebih parah"
+        },
+        {
+          "step": 2,
+          "action": "Ganti IC charging di service center",
+          "detail": "Biaya: Rp 200.000 - Rp 500.000"
+        },
+        {
+          "step": 3,
+          "action": "Cek juga motherboard untuk kerusakan lain",
+          "detail": "IC charging rusak bisa mempengaruhi komponen lain"
+        }
+      ],
+      "prevention": [
+        "Jangan menggunakan smartphone saat charging",
+        "Gunakan charger original",
+        "Charging di tempat berventilasi baik"
+      ],
+      "estimated_cost": "200000-500000",
+      "repair_difficulty": "high",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kemungkinan_ram_penuh": {
+      "id": "kemungkinan_ram_penuh",
+      "name": "RAM Penuh",
+      "type": "software",
+      "severity": "medium",
+      "description": "RAM tidak cukup untuk menjalankan aplikasi, menyebabkan force close.",
+      "causes": [
+        "Terlalu banyak aplikasi berjalan bersamaan",
+        "RAM smartphone memang kecil",
+        "Memory leak dari aplikasi tertentu",
+        "Cache terlalu banyak"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Clear recent apps",
+          "detail": "Tutup aplikasi yang tidak digunakan"
+        },
+        {
+          "step": 2,
+          "action": "Restart smartphone",
+          "detail": "Untuk membersihkan RAM"
+        },
+        {
+          "step": 3,
+          "action": "Uninstall aplikasi yang jarang digunakan",
+          "detail": "Untuk mengosongkan RAM"
+        },
+        {
+          "step": 4,
+          "action": "Gunakan lite version aplikasi",
+          "detail": "Misalnya Facebook Lite, Messenger Lite"
+        }
+      ],
+      "prevention": [
+        "Jangan install terlalu banyak aplikasi",
+        "Tutup aplikasi setelah selesai digunakan",
+        "Clear cache secara berkala"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "very_low",
+      "source": "Chen et al. (2023)"
+    },
+    "aplikasi_tidak_kompatibel": {
+      "id": "aplikasi_tidak_kompatibel",
+      "name": "Aplikasi Tidak Kompatibel",
+      "type": "software",
+      "severity": "low",
+      "description": "Aplikasi tidak kompatibel dengan versi Android atau spesifikasi smartphone.",
+      "causes": [
+        "Aplikasi memerlukan Android versi lebih tinggi",
+        "Spesifikasi smartphone tidak memenuhi",
+        "Aplikasi rusak saat download",
+        "Konflik dengan aplikasi lain"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek requirement aplikasi di Play Store",
+          "detail": "Pastikan smartphone memenuhi syarat"
+        },
+        {
+          "step": 2,
+          "action": "Update aplikasi ke versi terbaru",
+          "detail": "Atau cari versi yang kompatibel"
+        },
+        {
+          "step": 3,
+          "action": "Uninstall dan install ulang",
+          "detail": "Untuk memastikan instalasi benar"
+        },
+        {
+          "step": 4,
+          "action": "Cari aplikasi alternatif",
+          "detail": "Jika tetap tidak bisa"
+        }
+      ],
+      "prevention": [
+        "Selalu cek requirement sebelum install",
+        "Update Android OS jika memungkinkan",
+        "Baca review pengguna sebelum install"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "very_low",
+      "source": "Zhang et al. (2021)"
+    },
+    "storage_penuh_masalah": {
+      "id": "storage_penuh_masalah",
+      "name": "Storage Penuh",
+      "type": "software",
+      "severity": "medium",
+      "description": "Storage internal penuh menyebabkan smartphone lemot dan aplikasi error.",
+      "causes": [
+        "Terlalu banyak file media (foto, video)",
+        "Cache aplikasi menumpuk",
+        "File download yang tidak perlu",
+        "Aplikasi terlalu banyak"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Hapus file tidak perlu",
+          "detail": "Foto, video, download yang tidak penting"
+        },
+        {
+          "step": 2,
+          "action": "Clear cache semua aplikasi",
+          "detail": "Settings > Storage > Cached Data > Clear"
+        },
+        {
+          "step": 3,
+          "action": "Pindahkan file ke SD card atau cloud",
+          "detail": "Google Photos, Google Drive, dll"
+        },
+        {
+          "step": 4,
+          "action": "Uninstall aplikasi yang jarang digunakan",
+          "detail": "Buat ruang minimal 1-2 GB kosong"
+        }
+      ],
+      "prevention": [
+        "Rutin hapus file tidak perlu",
+        "Aktifkan auto backup ke cloud",
+        "Gunakan SD card untuk media",
+        "Clear cache secara berkala"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "very_low",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kemungkinan_malware": {
+      "id": "kemungkinan_malware",
+      "name": "Terinfeksi Malware/Virus",
+      "type": "software",
+      "severity": "high",
+      "description": "Smartphone terinfeksi malware yang menyebabkan performa menurun.",
+      "causes": [
+        "Install aplikasi dari sumber tidak resmi",
+        "Klik link mencurigakan",
+        "Download file berbahaya",
+        "Tidak ada antivirus"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Install antivirus (Avast, AVG, Bitdefender)",
+          "detail": "Scan smartphone secara menyeluruh"
+        },
+        {
+          "step": 2,
+          "action": "Boot ke Safe Mode",
+          "detail": "Settings > Restart > Safe Mode"
+        },
+        {
+          "step": 3,
+          "action": "Uninstall aplikasi mencurigakan",
+          "detail": "Terutama yang baru diinstall"
+        },
+        {
+          "step": 4,
+          "action": "Factory Reset jika parah",
+          "detail": "Backup data penting terlebih dahulu"
+        }
+      ],
+      "prevention": [
+        "Hanya install dari Play Store resmi",
+        "Jangan klik link mencurigakan",
+        "Aktifkan Google Play Protect",
+        "Periksa permission aplikasi"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "low",
+      "source": "Chen et al. (2023)"
+    },
+    "kemungkinan_masalah_display": {
+      "id": "kemungkinan_masalah_display",
+      "name": "Masalah Display/Layar",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Layar mengalami masalah yang memerlukan diagnosis lebih lanjut.",
+      "causes": [
+        "LCD rusak",
+        "Backlight mati",
+        "Konektor longgar",
+        "Kerusakan akibat benturan"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Coba restart smartphone",
+          "detail": "Tekan dan tahan tombol power 10 detik"
+        },
+        {
+          "step": 2,
+          "action": "Cek di tempat gelap dengan senter",
+          "detail": "Untuk mengecek apakah backlight yang mati"
+        },
+        {
+          "step": 3,
+          "action": "Bawa ke service center untuk diagnosis",
+          "detail": "Kemungkinan perlu ganti LCD atau backlight"
+        }
+      ],
+      "prevention": [
+        "Gunakan tempered glass",
+        "Hindari tekanan berlebihan",
+        "Gunakan case pelindung"
+      ],
+      "estimated_cost": "300000-2000000",
+      "repair_difficulty": "high",
+      "source": "Zhang et al. (2021)"
+    },
+    "kemungkinan_masalah_touchscreen": {
+      "id": "kemungkinan_masalah_touchscreen",
+      "name": "Masalah Touchscreen",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Touchscreen mengalami masalah responsivitas.",
+      "causes": [
+        "Digitizer rusak",
+        "Kalibrasi error",
+        "Software bermasalah",
+        "Layar kotor atau basah"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Bersihkan layar dengan kain microfiber",
+          "detail": "Pastikan tidak ada kotoran atau air"
+        },
+        {
+          "step": 2,
+          "action": "Kalibrasi touchscreen",
+          "detail": "Settings > Display > Touchscreen Calibration"
+        },
+        {
+          "step": 3,
+          "action": "Restart dalam safe mode",
+          "detail": "Untuk cek apakah masalah dari aplikasi"
+        },
+        {
+          "step": 4,
+          "action": "Jika masih bermasalah, ganti digitizer",
+          "detail": "Biaya: Rp 200.000 - Rp 1.500.000"
+        }
+      ],
+      "prevention": [
+        "Pasang screen protector berkualitas",
+        "Bersihkan layar secara rutin",
+        "Hindari penggunaan dengan tangan basah"
+      ],
+      "estimated_cost": "200000-1500000",
+      "repair_difficulty": "medium",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kemungkinan_masalah_baterai": {
+      "id": "kemungkinan_masalah_baterai",
+      "name": "Masalah Baterai",
+      "type": "hardware",
+      "severity": "medium",
+      "description": "Baterai mengalami masalah yang perlu pengecekan.",
+      "causes": [
+        "Degradasi baterai",
+        "Aplikasi background berlebihan",
+        "Charging tidak optimal",
+        "Malware"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Cek battery health",
+          "detail": "Gunakan aplikasi AccuBattery atau cek di service center"
+        },
+        {
+          "step": 2,
+          "action": "Tutup aplikasi background yang tidak perlu",
+          "detail": "Settings > Apps > Force Stop"
+        },
+        {
+          "step": 3,
+          "action": "Aktifkan battery saver",
+          "detail": "Settings > Battery > Battery Saver"
+        },
+        {
+          "step": 4,
+          "action": "Jika capacity < 80%, ganti baterai",
+          "detail": "Biaya: Rp 100.000 - Rp 500.000"
+        }
+      ],
+      "prevention": [
+        "Jangan charge sampai 100% terus menerus",
+        "Jaga level baterai 20-80%",
+        "Gunakan charger original",
+        "Hindari penggunaan saat charging"
+      ],
+      "estimated_cost": "100000-500000",
+      "repair_difficulty": "low",
+      "source": "Chen et al. (2023)"
+    },
+    "kemungkinan_masalah_charging": {
+      "id": "kemungkinan_masalah_charging",
+      "name": "Masalah Charging",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Smartphone mengalami masalah saat charging.",
+      "causes": [
+        "Port USB rusak atau kotor",
+        "Kabel charging rusak",
+        "Charger tidak sesuai",
+        "IC charging bermasalah"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Bersihkan port USB dengan sikat halus",
+          "detail": "Gunakan tusuk gigi atau sikat gigi lembut"
+        },
+        {
+          "step": 2,
+          "action": "Coba kabel dan charger lain yang kompatibel",
+          "detail": "Pastikan spesifikasi sesuai"
+        },
+        {
+          "step": 3,
+          "action": "Coba wireless charging jika tersedia",
+          "detail": "Alternatif sementara"
+        },
+        {
+          "step": 4,
+          "action": "Jika masih bermasalah, ke service center",
+          "detail": "Kemungkinan perlu ganti port atau IC charging"
+        }
+      ],
+      "prevention": [
+        "Cabut kabel dengan hati-hati",
+        "Bersihkan port secara berkala",
+        "Gunakan charger original",
+        "Hindari charging di tempat lembab"
+      ],
+      "estimated_cost": "75000-500000",
+      "repair_difficulty": "medium",
+      "source": "Zhang et al. (2021)"
+    },
+    "kemungkinan_masalah_performa": {
+      "id": "kemungkinan_masalah_performa",
+      "name": "Masalah Performa",
+      "type": "software",
+      "severity": "medium",
+      "description": "Smartphone terasa lambat dan tidak responsif.",
+      "causes": [
+        "RAM penuh",
+        "Storage hampir penuh",
+        "Aplikasi background berlebihan",
+        "Malware atau virus",
+        "OS perlu update"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Clear recent apps",
+          "detail": "Tutup semua aplikasi yang tidak digunakan"
+        },
+        {
+          "step": 2,
+          "action": "Clear cache",
+          "detail": "Settings > Storage > Cached Data > Clear"
+        },
+        {
+          "step": 3,
+          "action": "Uninstall aplikasi yang jarang digunakan",
+          "detail": "Kosongkan minimal 10% storage"
+        },
+        {
+          "step": 4,
+          "action": "Scan dengan antivirus",
+          "detail": "Pastikan tidak ada malware"
+        },
+        {
+          "step": 5,
+          "action": "Factory reset sebagai solusi terakhir",
+          "detail": "Backup data terlebih dahulu"
+        }
+      ],
+      "prevention": [
+        "Rutin clear cache",
+        "Install aplikasi seperlunya",
+        "Update OS secara berkala",
+        "Restart smartphone seminggu sekali"
+      ],
+      "estimated_cost": "0",
+      "repair_difficulty": "very_low",
+      "source": "Kumar & Sharma (2022)"
+    },
+    "kemungkinan_masalah_thermal": {
+      "id": "kemungkinan_masalah_thermal",
+      "name": "Masalah Thermal/Panas",
+      "type": "hybrid",
+      "severity": "medium",
+      "description": "Smartphone mengalami panas berlebihan.",
+      "causes": [
+        "Proses background berlebihan",
+        "Gaming berat terlalu lama",
+        "Charging sambil digunakan",
+        "Processor bermasalah",
+        "Ventilasi kurang baik"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Tutup semua aplikasi dan biarkan dingin",
+          "detail": "Jangan gunakan selama 30 menit"
+        },
+        {
+          "step": 2,
+          "action": "Cek aplikasi yang menggunakan banyak CPU",
+          "detail": "Settings > Battery > App Battery Usage"
+        },
+        {
+          "step": 3,
+          "action": "Hindari charging sambil digunakan",
+          "detail": "Terutama untuk gaming"
+        },
+        {
+          "step": 4,
+          "action": "Lepas case saat gaming",
+          "detail": "Untuk sirkulasi udara lebih baik"
+        },
+        {
+          "step": 5,
+          "action": "Jika overheat terus menerus, ke service center",
+          "detail": "Kemungkinan masalah processor atau motherboard"
+        }
+      ],
+      "prevention": [
+        "Jangan gaming terlalu lama",
+        "Hindari direct sunlight",
+        "Gunakan case yang breathable",
+        "Update aplikasi dan OS"
+      ],
+      "estimated_cost": "0-1000000",
+      "repair_difficulty": "medium",
+      "source": "Chen et al. (2023)"
+    },
+    "kerusakan_fisik_layar": {
+      "id": "kerusakan_fisik_layar",
+      "name": "Kerusakan Fisik Layar",
+      "type": "hardware",
+      "severity": "high",
+      "description": "Layar mengalami kerusakan fisik seperti retak atau pecah.",
+      "causes": [
+        "Smartphone jatuh",
+        "Terbentur benda keras",
+        "Tertindih atau tertekan"
+      ],
+      "solutions": [
+        {
+          "step": 1,
+          "action": "Backup data segera",
+          "detail": "Selagi touchscreen masih berfungsi"
+        },
+        {
+          "step": 2,
+          "action": "Ganti full set layar",
+          "detail": "Biaya: Rp 400.000 - Rp 2.500.000 tergantung tipe"
+        },
+        {
+          "step": 3,
+          "action": "Pasang tempered glass baru",
+          "detail": "Untuk proteksi setelah ganti"
+        }
+      ],
+      "prevention": [
+        "Pasang tempered glass berkualitas",
+        "Gunakan case dengan screen protector",
+        "Hindari menaruh di saku dengan benda keras"
+      ],
+      "estimated_cost": "400000-2500000",
+      "repair_difficulty": "medium",
+      "source": "Zhang et al. (2021)"
+    }
+  }
+}
